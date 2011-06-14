@@ -13,13 +13,12 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "twitphoto"
   gem.homepage = "http://github.com/scosman/twitphoto"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "scosman@gmail.com"
+  gem.summary = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz"
+  gem.description = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz"
+  gem.email = "delrox@live.com"
   gem.authors = ["Steve Cosman"]
   # dependencies defined in Gemfile
 end

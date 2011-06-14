@@ -1,6 +1,6 @@
 = twitphoto
 
-Description goes here.
+a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz
 
 == Contributing to twitphoto
  
