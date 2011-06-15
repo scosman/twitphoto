@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Steve Cosman}]
-  s.date = %q{2011-06-14}
+  s.date = %q{2011-06-15}
   s.description = %q{a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz}
   s.email = %q{delrox@live.com}
   s.extra_rdoc_files = [
@@ -19,14 +19,15 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/adaptors.rb",
     "lib/twitphoto.rb",
     "test/helper.rb",
-    "test/test_twitphoto.rb"
+    "test/test_twitphoto.rb",
+    "twitphoto.gemspec"
   ]
   s.homepage = %q{http://github.com/scosman/twitphoto}
   s.licenses = [%q{MIT}]
