@@ -1,6 +1,21 @@
 require 'uri'
 
 class Adaptors
+  class InstagramAdaptor
+    def self.getImageUrl url
+        if url.index("http://instagr.am") != 0
+          return nil
+        end
+
+        # ensure last char is '/'
+        if url[url.length - 1] != "/"[0]
+          url = url + "/"
+        end
+
+        return url + "media/?size=m"
+    end
+  end
+
   class LockerzAdaptor
     def self.getImageUrl url
         # TweetPhoto was a good name, why they changed twice I don't understand
