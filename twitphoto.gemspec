@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twitphoto}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Steve Cosman}]
-  s.date = %q{2011-06-15}
+  s.date = %q{2011-06-17}
   s.description = %q{a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz}
   s.email = %q{delrox@live.com}
   s.extra_rdoc_files = [
