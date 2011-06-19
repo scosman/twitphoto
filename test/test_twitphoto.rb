@@ -2,8 +2,30 @@ require 'helper'
 require 'test/unit'
 require 'twitphoto'
 require 'adaptors'
+require 'twitter'
 
 class TestTwitphoto < Test::Unit::TestCase
+
+  should "test usage with Twitter gem" do
+
+    tweetWithTwitterMedia = Twitter.status(82472660038197249, :include_entities => 't')
+    results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet(tweetWithTwitterMedia)
+    assert_equal 1, results.length
+    assert_equal "http://p.twimg.com/ASUAcoWCIAIsmIA.png", results[0]
+
+    tweetWithThirdPartyMedia = Twitter.status(82480106379026433, :include_entities => 't')
+    results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet tweetWithThirdPartyMedia
+    assert_equal 1, results.length
+    assert_equal "http://yfrog.com/kea33tj:medium", results[0]
+
+    tweetWithThirdPartyMediaMulti = Twitter.status(82513016645623808, :include_entities => 't')
+    results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet tweetWithThirdPartyMediaMulti
+    assert_equal 3, results.length
+
+    tweetWithNoMedia = Twitter.status(82153561638699008, :include_entities => 't')
+    results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet tweetWithNoMedia
+    assert_equal 0, results.length
+  end
 
   should "test getPhotoFromUrl" do
     assert_equal TwitPhoto::TwitPhoto.getPhotoUrlFromUrl("http://tweetphoto.com/28103398"), "http://api.plixi.com/api/tpapi.svc/imagefromurl?size=medium&url=http://tweetphoto.com/28103398"

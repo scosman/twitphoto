@@ -16,8 +16,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "twitphoto"
   gem.homepage = "http://github.com/scosman/twitphoto"
   gem.license = "MIT"
-  gem.summary = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz"
-  gem.description = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitpic, yfrog, instagram, flickr and plixi/lockerz"
+  gem.summary = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitter/photobucket, twitpic, yfrog, instagram and twitphoto/plixi/lockerz"
+  gem.description = "a gem to generate an image URL from shortened URLs from common photo sharing tools. Supports twitter/photobucket, twitpic, yfrog, instagram and tweetphoto/plixi/lockerz. It also includes support for the twitter gem, which helps with expanding t.co and bit.ly shortened URLs. Flickr is not supported as it would require a service call."
   gem.email = "delrox@live.com"
   gem.authors = ["Steve Cosman"]
   # dependencies defined in Gemfile
