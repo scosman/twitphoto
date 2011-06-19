@@ -13,6 +13,11 @@ class TestTwitphoto < Test::Unit::TestCase
     assert_equal 1, results.length
     assert_equal "http://p.twimg.com/ASUAcoWCIAIsmIA.png", results[0]
 
+    RTtweetWithTwitterMedia = Twitter.status(82486891202621440, :include_entities => 't')
+    results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet(RTtweetWithTwitterMedia)
+    assert_equal 1, results.length
+    assert_equal "http://p.twimg.com/ASUAcoWCIAIsmIA.png", results[0]
+
     tweetWithThirdPartyMedia = Twitter.status(82480106379026433, :include_entities => 't')
     results = TwitPhoto::TwitPhoto.getPhotoUrlsFromTweet tweetWithThirdPartyMedia
     assert_equal 1, results.length

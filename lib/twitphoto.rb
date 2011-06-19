@@ -73,8 +73,12 @@ class TwitPhoto
   def self.getPhotoUrlsFromTweet tweet
     results = []
 
+    if !tweet.retweeted_status.nil?
+      tweet = tweet.retweeted_status
+    end
+
     # ensure the user included entites
-    if !defined? tweet.entites || tweet.entities.nil?
+    if !defined? tweet.entites || tweet.entities.nil? 
       raise ArgumentError, 'not a valid tweet object, make sure you :include_entities => \'t\' in the request'
     end
 
