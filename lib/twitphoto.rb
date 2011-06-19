@@ -1,5 +1,6 @@
 require 'adaptors'
 
+module TwitPhoto
 class TwitPhoto
 
   public
@@ -30,4 +31,5 @@ class TwitPhoto
     return nil
   end
 
+end
 end

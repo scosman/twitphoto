@@ -1,5 +1,6 @@
 require 'uri'
 
+module TwitPhoto
 class Adaptors
   class InstagramAdaptor
     def self.getImageUrl url
@@ -55,4 +56,5 @@ class Adaptors
     end
   end
 
+end
 end
