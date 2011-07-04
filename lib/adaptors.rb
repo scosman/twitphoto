@@ -38,7 +38,7 @@ class Adaptors
         uri = URI.parse(url)
         id = uri.path
 
-        return "http://twitpic.com/show/thumb" + id 
+        return "http://twitpic.com/show/large" + id 
     end
   end
 
